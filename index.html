@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Snake Game</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="game-container">
+		<canvas id="gc" class="game-canvas" width="400" height="400"></canvas>
+	</div>
+	<div class="keys">
+	  <a class="up arr" onclick="Snake.action('up')">
+	    <i class="chevron up"></i></a>
+	  <br />
+	  <a class="left arr" onclick="Snake.action('left')">
+	    <i class="chevron left"></i></a>
+	  <a class="down arr" onclick="Snake.action('down')">
+	    <i class="chevron down"></i></a>
+	  <a class="right arr" onclick="Snake.action('right')">
+	    <i class="chevron right"></i></a>
+	</div>
+	<div class="control-keys">
+	  <select class="control-buttons" id="level-selector" onclick="Snake.pause();"
+	  onchange="Snake.start(this.value)">
+	    -Select level-
+	    <option class="level-option" value="4" selected>Easy</option>
+	    <option class="level-option" value="6">Normal</option>
+	    <option class="level-option" value="8">Hard</option>
+	  </select>
+	  <button class="control-buttons"
+	    onclick="Snake.pause();">
+	    Space
+	  </button>
+	</div>
+	<script type="" src="game.js"></script>
+</body>
+</html>
